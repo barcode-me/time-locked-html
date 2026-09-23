@@ -1,0 +1,25 @@
+{
+  "name": "time-locked-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/*.cjs",
+    "build": "node src/build.cjs",
+    "test:unit": "node --test test/build.test.cjs test/compile.test.cjs test/images.test.cjs test/drand.test.cjs",
+    "test:browser": "node --test test/test.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.4",
+    "terser": "^5.51.2",
+    "tlock-js": "^0.9.0"
+  }
+}

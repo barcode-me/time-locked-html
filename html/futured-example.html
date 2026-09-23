@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Futured block authoring</title></head>
+<body>
+  <h1>Scheduled content</h1>
+  <template data-encrypted-block elementId="scheduled-content" password="FUTURED_PASSWORD">
+    <targets data-futured>
+    [{
+      "url": "http://localhost:8000/hash",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "text/plain; charset=utf-8"
+      },
+      "body": "{\"namespace\":\"foo\",\"timestamp\":10000000000}"
+    }]
+    </targets>
+    <h2>Unlocked content</h2>
+    <p>The compiler reads FUTURED_PASSWORD from the password file. The page fetches that same password from the service to decrypt.</p>
+  </template>
+</body>
+</html>

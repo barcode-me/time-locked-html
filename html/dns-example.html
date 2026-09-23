@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>DNS TXT password example</title></head>
+<body>
+  <h1>Unlock with a DNS TXT record</h1>
+  <p>Replace example.com with a domain you control, then publish a TXT record containing pass=demo-only-change-me. The manual choice also unlocks this demonstration.</p>
+  <template data-encrypted-block elementId="dns-content" password="PAGE_PASSWORD">
+    <targets data-dns data-domain="example.com" data-txt-key="pass"></targets>
+    <targets data-manual></targets>
+    <h2>Unlocked content</h2>
+    <p>The DNS TXT value supplied the password for this block.</p>
+  </template>
+</body>
+</html>

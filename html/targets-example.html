@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Password target choices</title></head>
+<body>
+  <h1>Choose how to unlock</h1>
+  <template data-encrypted-block elementId="choices" password="PAGE_PASSWORD">
+    <targets data-manual></targets>
+    <targets data-drand>{"timestamp":"2030-01-01T00:00:00Z"}</targets>
+    <targets data-futured>
+      [{"url":"http://localhost:8000/password","method":"GET","namespace":"example","timestamp":"2030-01-01T00:00:00Z"}]
+    </targets>
+    <h2>Unlocked content</h2>
+    <p>Every choice uses the same password to decrypt this block.</p>
+  </template>
+</body>
+</html>

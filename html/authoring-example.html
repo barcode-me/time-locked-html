@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Encrypted page authoring example</title>
+  </head>
+  <body>
+    <h1>Public introduction</h1>
+    <p>The following content is encrypted during compilation.</p>
+    <div id="private-content"></div>
+
+    <template data-encrypted-block elementId="private-content" password="PAGE_PASSWORD"><targets data-manual></targets>
+      <h2>Private content</h2>
+      <p>This paragraph is visible after entering the build password.</p>
+
+      <template data-encrypted-block elementId="nested-content" password="PAGE_PASSWORD"><targets data-manual></targets>
+        <h3>Nested content</h3>
+        <p>This block is discovered only after its parent is decrypted.</p>
+      </template>
+    </template>
+  </body>
+</html>
